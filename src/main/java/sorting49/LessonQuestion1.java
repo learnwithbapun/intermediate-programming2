@@ -11,7 +11,7 @@ public class LessonQuestion1 {
 	
 	public static void main(String[] args) {
 		int arr[] = { 2, 4, 2, 5, 36, 5 };
-//TODELETE
+//TO DELETE
 		deleteElement(arr);
 
 	}
