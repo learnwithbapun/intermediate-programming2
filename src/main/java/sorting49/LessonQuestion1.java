@@ -4,14 +4,13 @@ import java.util.Arrays;
 
 /*
  * Array of n integers , you have to delete all the element of the array , for each deletion you have to pay the cost of it.
- * , find the minimum cost possible
+ *  find the minimum cost possible
  * 
  */
 public class LessonQuestion1 {
 	
 	public static void main(String[] args) {
 		int arr[] = { 2, 4, 2, 5, 36, 5 };
-//TO DELETE
 		deleteElement(arr);
 
 	}
