@@ -25,7 +25,7 @@ Return 1 if any such integer p is present else, return -1.
 
 
 Example Input
-Input 1:
+Input 1:     
 
  A = [3, 2, 1, 3]
 Input 2:
@@ -53,21 +53,23 @@ Explanation 2:
 public class Assignment2 {
 	public int solve(int[] A) {
 
+		Arrays.sort(A);// SORTED in ascending order // O(nlogn)
+
 		int n = A.length;
-
-		Arrays.sort(A);
-
-		for (int i = 0; i < n; i++) {
-
-		}
-
+		int ans = 0;
 		int count = 0;
-		for (int i = 0; i < n; i++) {
-			if (A[i] == i) {
-				count++;
+		for (int i = 1; i < n; i++) { // O(n)
+			if (A[i] == A[i - 1]) {
+
+			} else {
+				count = i;
+			}
+
+			if (count == A[i]) {
+				ans++;
 			}
 		}
-		return count > 0 ? 1 : -1;
 
+		return ans;// TC- O(n)
 	}
 }
