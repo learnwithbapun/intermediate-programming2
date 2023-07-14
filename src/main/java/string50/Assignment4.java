@@ -46,17 +46,37 @@ The array in sorted order is [1, 2, 3, 4].
 */
 public class Assignment4 {
 
-	public String solve(String A) {
-		char ch[] = A.toCharArray();
-		int n = ch.length;
+	public int[] solve(int[] A) {
+
+		int n = A.length;
+
+		// Maximum element in ARRAY
+
+		int max = A[0];
 		for (int i = 0; i < n; i++) {
-			if (ch[i] >= 'A' && ch[i] <= 'Z') {
-				ch[i] += 32;
-			} else {
-				ch[i] -= 32;
+			if (A[i] > max) {
+				max = A[i];
+
 			}
 		}
-		return new String(ch);
-	}
 
+		// CREATING the FREQUENCY ARRAY
+
+		int freq[] = new int[max + 1];
+
+		for (int i = 0; i < n; i++) {
+			freq[A[i]]++;
+		}
+
+		int k = 0;
+		for (int l = 0; l <= max; l++) {
+			for (int m = 0; m < freq[l]; m++) {
+				A[k] = l;
+				k++;
+			}
+		}
+
+		return A;
+
+	}
 }
