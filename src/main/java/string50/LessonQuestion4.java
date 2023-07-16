@@ -1,6 +1,6 @@
 package string50;
 
-// Given a String calculate the length of longest palindrome substring.
+// Given a String calculate the length of longest Palindrome  substring.
 
 public class LessonQuestion4 {
 
