@@ -73,23 +73,23 @@ public class Assignment5 {
 //}
 
 //return res.toString();
-      char arr[]=A.toCharArray();
+		char arr[] = A.toCharArray();
 
-     int si =0;
- int li=n-1;
- while(si < li){
-    char temp = arr[si];
+		int si = 0;
+		int li = n - 1;
+		while (si < li) {
+			char temp = arr[si];
 
-     arr[si] = arr[li];
-     arr[li] = temp;
-     si++;
-     li--;
- }
+			arr[si] = arr[li];
+			arr[li] = temp;
+			si++;
+			li--;
+		}
 
- return new String(arr);
+		return new String(arr);
 
-  }
-	
+	}
+
 	public static void main(String[] args) {
 		System.out.println(solve("scalar"));
 	}

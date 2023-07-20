@@ -49,9 +49,10 @@ Output 2:
 public class Assignment6 {
 
 	public static String solve(String A) {
-		int n = A.length();
+
 		A = A.trim();
 		String arr[] = A.split(" ");
+		int n = arr.length;
 
 		int si = 0;
 		int li = n - 1;
@@ -66,7 +67,13 @@ public class Assignment6 {
 
 		String res = "";
 		for (int i = 0; i < n; i++) {
-			res += arr[i];
+
+			if (i != n - 1) {
+				res += arr[i] + " ";
+			} else {
+				res += arr[i]; // TO Handle one last space
+			}
+
 		}
 		return res;
 	}
